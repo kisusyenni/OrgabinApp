@@ -3,14 +3,15 @@ package com.kisusyenni.orgabin.ui.schedule.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.kisusyenni.orgabin.data.source.local.ScheduleEntity
+import com.kisusyenni.orgabin.data.source.remote.response.ScheduleResponseItem
 import com.kisusyenni.orgabin.databinding.ItemRowScheduleBinding
+import java.text.SimpleDateFormat
 
 class ScheduleListAdapter: RecyclerView.Adapter<ScheduleListAdapter.ScheduleViewHolder>() {
 
-    private var listSchedule = ArrayList<ScheduleEntity>()
+    private var listSchedule = ArrayList<ScheduleResponseItem>()
 
-    fun setSchedule(schedule: List<ScheduleEntity>?) {
+    fun setSchedule(schedule: List<ScheduleResponseItem>?) {
         if (schedule == null) return
         this.listSchedule.clear()
         this.listSchedule.addAll(schedule)
@@ -29,19 +30,16 @@ class ScheduleListAdapter: RecyclerView.Adapter<ScheduleListAdapter.ScheduleView
     override fun getItemCount(): Int = listSchedule.size
 
     class ScheduleViewHolder(private val binding: ItemRowScheduleBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(schedule: ScheduleEntity) {
+        fun bind(schedule: ScheduleResponseItem) {
             with(binding) {
-                tvScheduleDay.text = schedule.date.toString()
-                tvScheduleDate.text = schedule.date.toString()
-                tvScheduleLocation.text = schedule.location.name
-                tvScheduleTime.text = "${schedule.location.startTime} - ${schedule.location.endTime}"
-//                itemView.setOnClickListener {
-//                    val intent = Intent(itemView.context, DetailActivity::class.java)
-//                    intent.putExtra(DetailActivity.EXTRA_ID, movie.id)
-//                    intent.putExtra(DetailActivity.EXTRA_CATEGORY, 1)
-//                    itemView.context.startActivity(intent)
-//                }
+                tvScheduleDay.text = customizeDate("EEE", schedule.date)
+                tvScheduleDate.text = customizeDate("d", schedule.date)
+                tvScheduleLocation.text = schedule.location
+                tvScheduleTime.text = "${customizeDate("HH:mm", schedule.startTime)} - ${customizeDate("HH:mm", schedule.endTime)}"
             }
+        }
+        private fun customizeDate(format:String, date:Long?): String {
+            return SimpleDateFormat(format).format(date).toString()
         }
     }
 

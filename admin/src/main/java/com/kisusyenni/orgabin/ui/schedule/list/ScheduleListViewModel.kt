@@ -3,12 +3,15 @@ package com.kisusyenni.orgabin.ui.schedule.list
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.kisusyenni.orgabin.data.source.local.ScheduleEntity
-import com.kisusyenni.orgabin.data.source.remote.api.FirebaseService
+import com.kisusyenni.orgabin.data.source.ScheduleRepository
+import com.kisusyenni.orgabin.data.source.remote.response.ScheduleResponseItem
 
 class ScheduleListViewModel : ViewModel() {
-    private val _scheduleList = MutableLiveData<List<ScheduleEntity>>()
-    val scheduleList: LiveData<List<ScheduleEntity>> = _scheduleList
+
+    private val repository = ScheduleRepository()
+
+    private val _scheduleList = MutableLiveData<List<ScheduleResponseItem>>()
+    val scheduleList: LiveData<List<ScheduleResponseItem>> = _scheduleList
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -19,10 +22,8 @@ class ScheduleListViewModel : ViewModel() {
 
     private fun getAllScheduleList() {
         _isLoading.value = true
-        val list = FirebaseService.getAllSchedule()
-        list?.let {
-            _scheduleList.value = it
-        }
+
+        repository.getAllScheduleList(_scheduleList)
     }
 
 }

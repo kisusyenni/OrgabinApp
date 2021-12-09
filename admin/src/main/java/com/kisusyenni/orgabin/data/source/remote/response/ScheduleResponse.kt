@@ -5,32 +5,26 @@ import com.google.gson.annotations.SerializedName
 data class ScheduleResponse(
 
 	@field:SerializedName("ScheduleResponse")
-	val scheduleResponse: List<ScheduleResponseItem>
+	val scheduleResponse: List<ScheduleResponseItem?>? = null
 )
 
 data class ScheduleResponseItem(
 
 	@field:SerializedName("date")
-	val date: String,
+	val date: Long? = null,
 
 	@field:SerializedName("show")
-	val show: Boolean,
+	val show: Boolean? = null,
 
 	@field:SerializedName("location")
-	val location: List<LocationItem>,
-
-	@field:SerializedName("id")
-	val id: Int
-)
-
-data class LocationItem(
-
-	@field:SerializedName("name")
-	val name: String,
+	val location: String? = null,
 
 	@field:SerializedName("startTime")
-	val startTime: String,
+	val startTime: Long? = null,
 
 	@field:SerializedName("endTime")
-	val endTime: String
+	val endTime: Long? = null,
+
+	@field:SerializedName("id")
+	val id: Int? = null
 )
