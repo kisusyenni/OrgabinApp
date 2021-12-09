@@ -1,44 +1,16 @@
 {
   "project_info": {
     "project_number": "912964615925",
+    "firebase_url": "https://orgabin-3f4a2-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "orgabin-3f4a2",
     "storage_bucket": "orgabin-3f4a2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:912964615925:android:629f2e69cfcc297c288fbc",
+        "mobilesdk_app_id": "1:912964615925:android:9567d5024d82e43e288fbc",
         "android_client_info": {
-          "package_name": "com.kisusyenni.admin"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "912964615925-b7o5kblv18d7v1c4qgi8osemj1rrapp5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAefaOx0e0qcBBC04tIVuuQo1w7e4iJIBk"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "912964615925-b7o5kblv18d7v1c4qgi8osemj1rrapp5.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:912964615925:android:5b0d10425c9839de288fbc",
-        "android_client_info": {
-          "package_name": "com.kisusyenni.common"
+          "package_name": "com.kisusyenni.orgabin"
         }
       },
       "oauth_client": [
