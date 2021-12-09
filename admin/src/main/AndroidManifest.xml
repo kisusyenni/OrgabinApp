@@ -13,10 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orgabin">
         <activity
-            android:name="com.kisusyenni.orgabin.AdminActivity"
+            android:name=".ui.schedule.form.ScheduleFormActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.schedule.list.ScheduleActivity"/>
+        <activity
+            android:name=".AdminActivity"
             android:exported="true" />
         <activity
-            android:name="com.kisusyenni.orgabin.ui.schedule.list.ScheduleActivity"
+            android:name=".ui.schedule.list.ScheduleActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,4 +29,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
