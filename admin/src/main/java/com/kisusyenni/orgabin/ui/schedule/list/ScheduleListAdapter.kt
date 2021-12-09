@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kisusyenni.orgabin.data.source.remote.response.ScheduleResponseItem
 import com.kisusyenni.orgabin.databinding.ItemRowScheduleBinding
 import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ScheduleListAdapter: RecyclerView.Adapter<ScheduleListAdapter.ScheduleViewHolder>() {
 
@@ -35,11 +37,19 @@ class ScheduleListAdapter: RecyclerView.Adapter<ScheduleListAdapter.ScheduleView
                 tvScheduleDay.text = customizeDate("EEE", schedule.date)
                 tvScheduleDate.text = customizeDate("d", schedule.date)
                 tvScheduleLocation.text = schedule.location
-                tvScheduleTime.text = "${customizeDate("HH:mm", schedule.startTime)} - ${customizeDate("HH:mm", schedule.endTime)}"
+                tvScheduleTime.text = "${customizeTime(schedule.startTime)} - ${customizeTime(schedule.endTime)}"
             }
         }
-        private fun customizeDate(format:String, date:Long?): String {
-            return SimpleDateFormat(format).format(date).toString()
+        private fun customizeDate(format: String, date:Long?): String {
+            val sdf = SimpleDateFormat(format, Locale.US)
+            sdf.timeZone = TimeZone.getTimeZone("Asia/Jakarta")
+            return sdf.format(date).toString()
+        }
+
+        private fun customizeTime(date:Long?): String {
+            val sdf = SimpleDateFormat("HH:mm", Locale.US)
+            sdf.timeZone = TimeZone.getTimeZone("Asia/Jakarta")
+            return sdf.format(date).toString()
         }
     }
 

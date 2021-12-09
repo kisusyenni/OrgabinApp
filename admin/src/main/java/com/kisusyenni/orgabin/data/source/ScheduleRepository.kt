@@ -15,17 +15,15 @@ class ScheduleRepository {
     fun getAllScheduleList(liveData: MutableLiveData<List<ScheduleResponseItem>>) {
         scheduleReference.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                Log.i("SNAPSHOT", snapshot.value.toString())
                 val scheduleData: List<ScheduleResponseItem> = snapshot.children.map { dataSnapshot ->
                     dataSnapshot.getValue(ScheduleResponseItem::class.java)!!
                 }
-                Log.i("SNAPSHOT", scheduleData.toString())
 
                 liveData.postValue(scheduleData)
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.e("cancel", error.toString())
+                Log.e("Cancel", error.toString())
             }
 
         })

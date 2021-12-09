@@ -26,5 +26,5 @@ data class ScheduleResponseItem(
 	val endTime: Long? = null,
 
 	@field:SerializedName("id")
-	val id: Int? = null
+	val id: String? = null
 )
