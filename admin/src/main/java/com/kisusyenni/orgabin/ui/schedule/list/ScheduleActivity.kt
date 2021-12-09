@@ -3,6 +3,7 @@ package com.kisusyenni.orgabin.ui.schedule.list
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.kisusyenni.orgabin.databinding.ActivityScheduleBinding
 
 class ScheduleActivity : AppCompatActivity() {
