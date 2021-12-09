@@ -8,7 +8,65 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:912964615925:android:9567d5024d82e43e288fbc",
+        "mobilesdk_app_id": "1:912964615925:android:4c4cc5e23122e2f0288fbc",
+        "android_client_info": {
+          "package_name": "com.kisusyenni.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912964615925-b7o5kblv18d7v1c4qgi8osemj1rrapp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAefaOx0e0qcBBC04tIVuuQo1w7e4iJIBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912964615925-b7o5kblv18d7v1c4qgi8osemj1rrapp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912964615925:android:f54c290c1a07ce71288fbc",
+        "android_client_info": {
+          "package_name": "com.kisusyenni.common"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912964615925-b7o5kblv18d7v1c4qgi8osemj1rrapp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAefaOx0e0qcBBC04tIVuuQo1w7e4iJIBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912964615925-b7o5kblv18d7v1c4qgi8osemj1rrapp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912964615925:android:c8a4d2c4a5c57d25288fbc",
         "android_client_info": {
           "package_name": "com.kisusyenni.orgabin"
         }
@@ -37,7 +95,7 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:912964615925:android:01a1897a8fde905a288fbc",
+        "mobilesdk_app_id": "1:912964615925:android:d5a61d580932146e288fbc",
         "android_client_info": {
           "package_name": "com.kisusyenni.user"
         }
