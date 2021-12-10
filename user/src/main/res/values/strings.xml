@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">User</string>
+    <string name="input_report_name_hint">Nama</string>
+    <string name="input_report_adress_hint">Alamat</string>
+    <string name="input_report_telp_hint">Nomor Telepon</string>
+    <string name="btn_report_send_text">Kirim Laporan</string>
+    <string name="input_report_title_hint">Judul Laporan</string>
+    <string name="input_report_description_hint">Isi Laporan</string>
+    <string name="send_report_title">Buat Laporan</string>
 </resources>
