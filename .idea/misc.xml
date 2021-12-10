@@ -5,6 +5,16 @@
       <map>
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/activity_admin.xml" value="0.259375" />
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/activity_auth.xml" value="0.25769927536231885" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/activity_schedule.xml" value="0.37962962962962965" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/activity_schedule_form.xml" value="0.259375" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/activity_schedule_list.xml" value="0.264" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/content_schedule.xml" value="0.13385416666666666" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/content_schedule_list.xml" value="0.4" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/fragment_first.xml" value="0.4" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/fragment_schedule_list.xml" value="0.264" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/fragment_second.xml" value="0.4" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/item_row_schedule.xml" value="0.4" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/now_schedule_fragment.xml" value="0.4" />
         <entry key="..\:/Exercise/Android/Orgabin/app/src/main/res/layout/activity_admin.xml" value="0.259375" />
         <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_user.xml" value="0.259375" />
       </map>
