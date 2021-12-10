@@ -1,4 +1,7 @@
 <resources>
+    <string name="sign_in_title">Sign In</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
     <string name="app_name">Orgabin</string>
     <string name="title_activity_schedule_list">ScheduleListActivity</string>
     <!-- Strings used for fragments for navigation -->
