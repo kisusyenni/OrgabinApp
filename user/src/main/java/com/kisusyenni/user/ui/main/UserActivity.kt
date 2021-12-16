@@ -1,4 +1,4 @@
-package com.kisusyenni.user.ui.activities
+package com.kisusyenni.user.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

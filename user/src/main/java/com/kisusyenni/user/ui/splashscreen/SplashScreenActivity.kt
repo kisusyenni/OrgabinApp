@@ -1,20 +1,21 @@
-package com.kisusyenni.user.ui.activities
+package com.kisusyenni.user.ui.splashscreen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import com.kisusyenni.user.R
+import com.kisusyenni.user.ui.main.UserActivity
 
-class SplashScreen : AppCompatActivity() {
-    @Suppress("DEPRECATION")
+class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        Handler().postDelayed({
-            startActivity(Intent(this, UserActivity::class.java))
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this@SplashScreenActivity, UserActivity::class.java))
             finish()
-        }, 3000)
+        }, 2000)
     }
 }
