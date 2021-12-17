@@ -1,5 +1,7 @@
 package com.kisusyenni.orgabin.data.source.remote.response
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import com.google.gson.annotations.SerializedName
 
 data class ScheduleResponse(
@@ -8,6 +10,7 @@ data class ScheduleResponse(
 	val scheduleResponse: List<ScheduleResponseItem?>? = null
 )
 
+@Parcelize
 data class ScheduleResponseItem(
 
 	@field:SerializedName("date")
@@ -27,4 +30,4 @@ data class ScheduleResponseItem(
 
 	@field:SerializedName("id")
 	val id: String? = null
-)
+): Parcelable

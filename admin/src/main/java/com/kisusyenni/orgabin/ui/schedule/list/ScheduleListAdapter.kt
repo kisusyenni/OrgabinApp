@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class ScheduleListAdapter: RecyclerView.Adapter<ScheduleListAdapter.ScheduleViewHolder>() {
+class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClickListener): RecyclerView.Adapter<ScheduleListAdapter.ScheduleViewHolder>() {
 
     private var listSchedule = ArrayList<ScheduleResponseItem>()
 
@@ -26,18 +26,24 @@ class ScheduleListAdapter: RecyclerView.Adapter<ScheduleListAdapter.ScheduleView
 
     override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
         val schedule = listSchedule[position]
-        holder.bind(schedule)
+        holder.bind(schedule, position)
     }
 
     override fun getItemCount(): Int = listSchedule.size
 
-    class ScheduleViewHolder(private val binding: ItemRowScheduleBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(schedule: ScheduleResponseItem) {
+    inner class ScheduleViewHolder(private val binding: ItemRowScheduleBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(schedule: ScheduleResponseItem, position: Int) {
             with(binding) {
                 tvScheduleDay.text = customizeDate("EEE", schedule.date)
                 tvScheduleDate.text = customizeDate("d", schedule.date)
                 tvScheduleLocation.text = schedule.location
                 tvScheduleTime.text = "${customizeTime(schedule.startTime)} - ${customizeTime(schedule.endTime)}"
+
+                ibMoreRowSch.setOnClickListener {
+                    schedule.id?.let { id ->
+                        optionsMenuClickListener.onOptionsMenuClicked(position, id)
+                    }
+                }
             }
         }
         private fun customizeDate(format: String, date:Long?): String {
@@ -51,6 +57,10 @@ class ScheduleListAdapter: RecyclerView.Adapter<ScheduleListAdapter.ScheduleView
             sdf.timeZone = TimeZone.getTimeZone("Asia/Jakarta")
             return sdf.format(date).toString()
         }
+
     }
 
+    interface OptionsMenuClickListener {
+        fun onOptionsMenuClicked(position: Int, id: String)
+    }
 }

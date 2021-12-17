@@ -16,14 +16,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:gravity="center">
+        android:gravity="start">
 
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginEnd="20dp">
+            android:gravity="start"
+            android:layout_weight="1"
+            android:layout_marginEnd="16dp">
 
             <TextView
                 android:id="@+id/tv_schedule_day"
@@ -41,9 +42,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:layout_marginEnd="8dp">
             <TextView
                 android:id="@+id/tv_schedule_location"
                 android:layout_width="wrap_content"
@@ -60,6 +63,15 @@
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
                 tools:text="Time" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ib_more_row_sch"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_horiz_24"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -17,4 +17,6 @@
     <string name="input_end_time_hint">Waktu Selesai</string>
     <string name="btn_form_submit_text">Masukkan</string>
     <string name="add_schedule_title">Tambah Jadwal</string>
+    <string name="edit_text">Edit</string>
+    <string name="delete_text">Delete</string>
 </resources>
