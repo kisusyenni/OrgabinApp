@@ -10,20 +10,15 @@ class ScheduleListViewModel : ViewModel() {
 
     private val repository = ScheduleRepository()
 
-    private val _scheduleList = MutableLiveData<List<ScheduleResponseItem>>()
-    val scheduleList: LiveData<List<ScheduleResponseItem>> = _scheduleList
+//    private val _scheduleList = MutableLiveData<List<ScheduleResponseItem>>()
+//    val scheduleList: LiveData<List<ScheduleResponseItem>> = _scheduleList
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
-    init {
-        getAllScheduleList()
-    }
-
-    private fun getAllScheduleList() {
+    fun getAllScheduleList(): LiveData<List<ScheduleResponseItem>> {
         _isLoading.value = true
-
-        repository.getAllScheduleList(_scheduleList)
+        return repository.getAllScheduleList()
     }
 
 }

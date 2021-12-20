@@ -1,6 +1,7 @@
 package com.kisusyenni.orgabin.data.source
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -12,14 +13,18 @@ class ScheduleRepository {
     private val database = FirebaseDatabase.getInstance()
     private val scheduleReference = database.getReference("Schedule")
 
-    fun getAllScheduleList(liveData: MutableLiveData<List<ScheduleResponseItem>>) {
-        scheduleReference.addValueEventListener(object: ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val scheduleData: List<ScheduleResponseItem> = snapshot.children.map { dataSnapshot ->
-                    dataSnapshot.getValue(ScheduleResponseItem::class.java)!!
-                }
+    private val _scheduleList = MutableLiveData<List<ScheduleResponseItem>>()
 
-                liveData.postValue(scheduleData)
+    fun getAllScheduleList(): MutableLiveData<List<ScheduleResponseItem>> {
+        scheduleReference.addValueEventListener(object: ValueEventListener {
+            var scheduleData = ArrayList<ScheduleResponseItem>()
+            override fun onDataChange(snapshot: DataSnapshot) {
+                scheduleData = snapshot.children.map { dataSnapshot ->
+                    dataSnapshot.getValue(ScheduleResponseItem::class.java)!!
+                } as ArrayList<ScheduleResponseItem>
+
+                _scheduleList.value = scheduleData
+
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -27,5 +32,6 @@ class ScheduleRepository {
             }
 
         })
+        return _scheduleList
     }
 }
