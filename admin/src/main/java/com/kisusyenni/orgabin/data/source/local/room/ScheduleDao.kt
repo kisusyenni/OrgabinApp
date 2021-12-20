@@ -1,20 +1,8 @@
 package com.kisusyenni.orgabin.data.source.local.room
 
 import com.google.android.gms.tasks.Task
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.*
 import com.kisusyenni.orgabin.data.source.local.entity.ScheduleEntity
-import com.google.firebase.database.DatabaseError
-
-import androidx.annotation.NonNull
-
-import com.google.firebase.database.DataSnapshot
-
-import com.google.firebase.database.ValueEventListener
-
-
-
-
 
 class ScheduleDao {
 
@@ -26,7 +14,7 @@ class ScheduleDao {
     }
 
     fun addSchedule(schedule: ScheduleEntity): Task<Void> {
-        return scheduleReference.push().setValue(schedule)
+        return scheduleReference.child(schedule.id).setValue(schedule)
     }
 
     fun generateId(): String? {
@@ -34,7 +22,7 @@ class ScheduleDao {
     }
 
     fun deleteSchedule(id: String) {
-        scheduleReference.child("id").equalTo(id).addListenerForSingleValueEvent(object: ValueEventListener {
+        scheduleReference.child(id).equalTo(id).addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 dataSnapshot.ref.removeValue()
 
@@ -45,7 +33,7 @@ class ScheduleDao {
 //        return scheduleReference.child(id!!).removeValue()
     }
 
-    fun getDetailSchedule(id: String) {
-
+    fun editSchedule(editedSchedule: ScheduleEntity, hashMap: HashMap<String, Any>): Task<Void> {
+        return scheduleReference.child(editedSchedule.id).updateChildren(hashMap)
     }
 }

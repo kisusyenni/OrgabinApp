@@ -3,6 +3,7 @@ package com.kisusyenni.orgabin.ui.schedule.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.kisusyenni.orgabin.data.source.local.entity.ScheduleEntity
 import com.kisusyenni.orgabin.data.source.remote.response.ScheduleResponseItem
 import com.kisusyenni.orgabin.databinding.ItemRowScheduleBinding
 import java.text.SimpleDateFormat
@@ -39,9 +40,13 @@ class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClick
                 tvScheduleLocation.text = schedule.location
                 tvScheduleTime.text = "${customizeTime(schedule.startTime)} - ${customizeTime(schedule.endTime)}"
 
+
+
                 ibMoreRowSch.setOnClickListener {
-                    schedule.id?.let { id ->
-                        optionsMenuClickListener.onOptionsMenuClicked(position, id)
+                    if (schedule.id !== null && schedule.date !== null && schedule.location !== null && schedule.startTime !== null && schedule.endTime !== null) {
+
+                        val scheduleEntity = ScheduleEntity(schedule.id, schedule.date, schedule.location, schedule.startTime, schedule.endTime, true)
+                        optionsMenuClickListener.onOptionsMenuClicked(position, scheduleEntity)
                     }
                 }
             }
@@ -61,6 +66,6 @@ class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClick
     }
 
     interface OptionsMenuClickListener {
-        fun onOptionsMenuClicked(position: Int, id: String)
+        fun onOptionsMenuClicked(position: Int, schedule: ScheduleEntity)
     }
 }
