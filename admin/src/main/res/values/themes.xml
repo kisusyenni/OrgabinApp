@@ -17,8 +17,8 @@
     <!--  Splash Screen  -->
     <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/splash</item>
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
     </style>
     <style name="Theme.Orgabin.NoActionBar">
         <item name="windowActionBar">false</item>
