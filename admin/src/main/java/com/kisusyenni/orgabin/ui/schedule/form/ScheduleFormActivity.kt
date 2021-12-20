@@ -26,6 +26,7 @@ class ScheduleFormActivity : AppCompatActivity() {
     private lateinit var etFormLocation: EditText
     private lateinit var etFormStartTime: EditText
     private lateinit var etFormEndTime: EditText
+    private lateinit var schedule: ScheduleEntity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +36,6 @@ class ScheduleFormActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val action = intent.getStringExtra(EXTRA_ACTION)
-//        val id = intent.getStringExtra(EXTRA_ID)
-        val schedule = intent.getParcelableExtra<ScheduleEntity>(EXTRA_SCHEDULE) as ScheduleEntity
 
         etFormDate = activityScheduleFormBinding.etFormDate
         etFormLocation = activityScheduleFormBinding.etFormLocation
@@ -44,6 +43,7 @@ class ScheduleFormActivity : AppCompatActivity() {
         etFormEndTime = activityScheduleFormBinding.etFormEndTime
 
         if (action == "edit") {
+            schedule = intent.getParcelableExtra<ScheduleEntity>(EXTRA_SCHEDULE) as ScheduleEntity
             setFormData(schedule)
         }
 
@@ -52,16 +52,7 @@ class ScheduleFormActivity : AppCompatActivity() {
             if(action == "add") {
                 addNewSchedule()
             } else if (action == "edit") {
-                val id = schedule.id
-                val stringDate = etFormDate.text.toString()
-                val date = formatDate(stringDate)
-                val location = etFormLocation.text.toString()
-                val startTime = formatTime(etFormStartTime.text.toString(), stringDate)
-                val endTime = formatTime(etFormEndTime.text.toString(), stringDate)
-
-                val editedSchedule = ScheduleEntity(id, date, location, startTime,endTime,true)
-
-                editSchedule(editedSchedule)
+                editSchedule(schedule.id)
             }
 
         }
@@ -89,7 +80,14 @@ class ScheduleFormActivity : AppCompatActivity() {
         }
     }
 
-    private fun editSchedule(editedSchedule: ScheduleEntity) {
+    private fun editSchedule(id: String) {
+        val stringDate = etFormDate.text.toString()
+        val date = formatDate(stringDate)
+        val location = etFormLocation.text.toString()
+        val startTime = formatTime(etFormStartTime.text.toString(), stringDate)
+        val endTime = formatTime(etFormEndTime.text.toString(), stringDate)
+
+        val editedSchedule = ScheduleEntity(id, date, location, startTime,endTime,true)
         val hashMap = HashMap<String, Any>()
         hashMap["id"] = editedSchedule.id
         hashMap["date"] = editedSchedule.date
@@ -97,6 +95,7 @@ class ScheduleFormActivity : AppCompatActivity() {
         hashMap["startTime"] = editedSchedule.startTime
         hashMap["endTime"] = editedSchedule.endTime
         hashMap["show"] = editedSchedule.show
+
 
         dao.editSchedule(editedSchedule, hashMap).addOnSuccessListener {
             Toast.makeText(this, "Schedule is Successfully Edited", Toast.LENGTH_LONG).show()
