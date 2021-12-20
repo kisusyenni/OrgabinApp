@@ -13,6 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orgabin">
         <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".auth.AuthActivity"
+            android:exported="true"/>
+        <activity
             android:name=".ui.schedule.form.ScheduleFormActivity"
             android:exported="true"
             android:parentActivityName=".ui.schedule.list.ScheduleActivity"/>
@@ -21,13 +34,7 @@
             android:exported="true" />
         <activity
             android:name=".ui.schedule.list.ScheduleActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
