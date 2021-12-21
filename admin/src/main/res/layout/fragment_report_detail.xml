@@ -31,7 +31,7 @@
                 android:layout_height="5dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:background="@color/teal_200"/>
+                android:background="@color/ternaryColor"/>
 
             <TextView
                 android:id="@+id/tv_report_date"
