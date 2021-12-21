@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/drawable/sheet_rounded.xml" value="0.14635416666666667" />
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/activity_admin.xml" value="0.259375" />
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/activity_auth.xml" value="0.25769927536231885" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/activity_report.xml" value="0.13020833333333334" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/bottom_report_sheet.xml" value="0.176" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/fragment_report_detail.xml" value="0.11614583333333334" />
+        <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/item_row_report.xml" value="0.13020833333333334" />
         <entry key="..\:/Exercise/Android/Orgabin/app/src/main/res/layout/activity_admin.xml" value="0.259375" />
         <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_user.xml" value="0.259375" />
       </map>
