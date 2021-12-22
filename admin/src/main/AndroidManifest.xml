@@ -11,6 +11,9 @@
         android:theme="@style/Theme.Orgabin">
         <activity
             android:name=".AdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.report.ReportActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
