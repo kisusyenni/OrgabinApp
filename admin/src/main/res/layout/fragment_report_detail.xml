@@ -7,8 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
+    android:layout_margin="1dp"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    app:behavior_hideable="true"
     app:behavior_peekHeight="400dp"
     >
 
@@ -34,7 +34,7 @@
                 android:background="@color/ternaryColor"/>
 
             <TextView
-                android:id="@+id/tv_report_date"
+                android:id="@+id/tv_report_content_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -42,7 +42,7 @@
                 tools:text="Date" />
 
             <TextView
-                android:id="@+id/tv_report_title"
+                android:id="@+id/tv_report_content_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
@@ -51,7 +51,7 @@
                 tools:text="Title this is lorem ipsum title report dolor sit amet hello world lorem ipsum title dolor sit amet lorem ipsum dolor" />
 
             <TextView
-                android:id="@+id/tv_report_detail"
+                android:id="@+id/tv_report_content_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:text="@string/report_sender_title" />
 
