@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 import java.util.*
 
 @Parcelize
-data class ReportEntity (
+data class UserReportEntity (
     val id: String,
     val reportDate: Date?,
     val reportTitle: String?,

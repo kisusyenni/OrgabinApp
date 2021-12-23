@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import com.kisusyenni.user.R
-import com.kisusyenni.user.data.source.local.entity.ReportEntity
-import com.kisusyenni.user.data.source.local.room.ReportDao
+import com.kisusyenni.user.data.source.local.entity.UserReportEntity
+import com.kisusyenni.user.data.source.local.room.UserReportDao
 import com.kisusyenni.user.databinding.FragmentDescriptionBinding
 import java.util.*
 
@@ -24,12 +24,12 @@ class DescriptionFragment : Fragment() {
     private var reportTitle: String? = null
     private var reportDescription: String? = null
     private var valid:Boolean = false
-    private val dao = ReportDao()
+    private val dao = UserReportDao()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         fragmentDescriptionBinding = FragmentDescriptionBinding.inflate(layoutInflater, container, false)
         return fragmentDescriptionBinding.root
     }
@@ -55,7 +55,7 @@ class DescriptionFragment : Fragment() {
                     reportDescription = etReportDescription.text.toString()
 
                     if(id != null && bioName != null && bioAddress != null && bioContact != null && reportTitle != null) {
-                        val report = ReportEntity(id, date, reportTitle, reportDescription, bioName, bioAddress, bioContact)
+                        val report = UserReportEntity(id, date, reportTitle, reportDescription, bioName, bioAddress, bioContact)
                         dao.sendReport(report).addOnSuccessListener {
                             Toast.makeText(requireActivity(), "New Schedule is Successfully Added", Toast.LENGTH_LONG).show()
 
