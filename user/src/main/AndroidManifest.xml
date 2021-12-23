@@ -13,10 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orgabin">
         <activity
-            android:name=".ui.schedule.form.ScheduleFormActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.schedule.ScheduleActivity"
+            android:name=".ui.schedule.UserScheduleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
@@ -28,13 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.notification.UserNotificationActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.report.UserReportActivity"
-            android:exported="true"
-            android:parentActivityName=".ui.notification.UserNotificationActivity" />
         <activity
             android:name=".ui.main.UserActivity"
             android:exported="true"

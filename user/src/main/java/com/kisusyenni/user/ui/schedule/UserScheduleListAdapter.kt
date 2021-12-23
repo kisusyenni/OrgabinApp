@@ -3,14 +3,13 @@ package com.kisusyenni.user.ui.schedule
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.kisusyenni.user.data.source.local.entity.ScheduleEntity
 import com.kisusyenni.user.data.source.remote.response.ScheduleResponseItem
 import com.kisusyenni.user.databinding.ItemRowScheduleBinding
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClickListener): RecyclerView.Adapter<ScheduleListAdapter.ScheduleViewHolder>() {
+class UserScheduleListAdapter : RecyclerView.Adapter<UserScheduleListAdapter.ScheduleViewHolder>() {
 
     private var listSchedule = ArrayList<ScheduleResponseItem>()
 
@@ -27,28 +26,19 @@ class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClick
 
     override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
         val schedule = listSchedule[position]
-        holder.bind(schedule, position)
+        holder.bind(schedule)
     }
 
     override fun getItemCount(): Int = listSchedule.size
 
     inner class ScheduleViewHolder(private val binding: ItemRowScheduleBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(schedule: ScheduleResponseItem, position: Int) {
+        fun bind(schedule: ScheduleResponseItem) {
             with(binding) {
                 tvScheduleDay.text = customizeDate("EEE", schedule.date)
                 tvScheduleDate.text = customizeDate("d", schedule.date)
                 tvScheduleLocation.text = schedule.location
                 tvScheduleTime.text = "${customizeTime(schedule.startTime)} - ${customizeTime(schedule.endTime)}"
 
-
-
-                ibMoreRowSch.setOnClickListener {
-                    if (schedule.id !== null && schedule.date !== null && schedule.location !== null && schedule.startTime !== null && schedule.endTime !== null) {
-
-                        val scheduleEntity = ScheduleEntity(schedule.id, schedule.date, schedule.location, schedule.startTime, schedule.endTime, true)
-                        optionsMenuClickListener.onOptionsMenuClicked(position, scheduleEntity)
-                    }
-                }
             }
         }
         private fun customizeDate(format: String, date:Long?): String {
@@ -65,7 +55,4 @@ class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClick
 
     }
 
-    interface OptionsMenuClickListener {
-        fun onOptionsMenuClicked(position: Int, schedule: ScheduleEntity)
-    }
 }

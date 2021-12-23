@@ -8,7 +8,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.kisusyenni.user.data.source.remote.response.ScheduleResponseItem
 
-class ScheduleRepository {
+class UserScheduleRepository {
     private val database = FirebaseDatabase.getInstance()
     private val scheduleReference = database.getReference("Schedule")
 
