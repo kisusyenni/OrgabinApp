@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orgabin">
         <activity
+            android:name=".AdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.report.ReportActivity"
+            android:exported="true"/>
+        <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
@@ -29,9 +35,6 @@
             android:name=".ui.schedule.form.ScheduleFormActivity"
             android:exported="true"
             android:parentActivityName=".ui.schedule.list.ScheduleActivity"/>
-        <activity
-            android:name=".AdminActivity"
-            android:exported="true" />
         <activity
             android:name=".ui.schedule.list.ScheduleActivity"
             android:exported="true" />
