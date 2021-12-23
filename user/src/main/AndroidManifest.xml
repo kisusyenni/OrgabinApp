@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orgabin">
         <activity
+            android:name=".ui.notification.NotificationActivity"
+            android:exported="true" />
+        <activity
             android:name=".UserActivity"
             android:exported="true" />
         <activity
