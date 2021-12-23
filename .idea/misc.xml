@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Abid/OrgabinApp/user/src/main/res/drawable/contained_a.xml" value="0.14947916666666666" />
+        <entry key="..\:/Abid/OrgabinApp/user/src/main/res/drawable/ic_launcher_background.xml" value="0.11944444444444445" />
+        <entry key="..\:/Abid/OrgabinApp/user/src/main/res/drawable/user_login.xml" value="0.14947916666666666" />
+        <entry key="..\:/Abid/OrgabinApp/user/src/main/res/drawable/user_splash.xml" value="0.15104166666666666" />
+        <entry key="..\:/Abid/OrgabinApp/user/src/main/res/layout/activity_sign_in_user.xml" value="0.264" />
+        <entry key="..\:/Abid/OrgabinApp/user/src/main/res/layout/activity_splash_screen.xml" value="0.13489583333333333" />
+        <entry key="..\:/Abid/OrgabinApp/user/src/main/res/layout/activity_user.xml" value="0.13333333333333333" />
+        <entry key="..\:/Abid/OrgabinApp/user/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11944444444444445" />
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/drawable-v24/splash.xml" value="0.1" />
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/drawable-v24/splash_background.xml" value="0.1" />
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/drawable/splash.xml" value="0.17604166666666668" />
@@ -16,6 +24,15 @@
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/layout/now_schedule_fragment.xml" value="0.13385416666666666" />
         <entry key="..\:/Exercise/Android/Orgabin/admin/src/main/res/menu/menu_item_row_schedule.xml" value="0.4" />
         <entry key="..\:/Exercise/Android/Orgabin/app/src/main/res/layout/activity_admin.xml" value="0.259375" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_schedule.xml" value="0.259375" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_schedule_form.xml" value="0.259375" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_send_report.xml" value="0.264" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_user.xml" value="0.259375" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_user_report.xml" value="0.19010416666666666" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/fragment_bio.xml" value="0.176" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/fragment_description.xml" value="0.165625" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/fragment_title.xml" value="0.152" />
+        <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/item_row_schedule.xml" value="0.259375" />
         <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/drawable/ic_launcher_background.xml" value="0.17604166666666668" />
         <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_notification.xml" value="0.264" />
         <entry key="..\:/Exercise/Android/Orgabin/user/src/main/res/layout/activity_user.xml" value="0.259375" />
