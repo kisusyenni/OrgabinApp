@@ -5,11 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kisusyenni.orgabin.data.source.remote.response.ReportResponseItem
 import com.kisusyenni.orgabin.databinding.ItemRowReportBinding
+import com.kisusyenni.orgabin.utils.CustomDateTimeFormatter
 
 class ReportListAdapter: RecyclerView.Adapter<ReportListAdapter.ReportViewHolder>(){
 
     private var listReport = ArrayList<ReportResponseItem>()
-
+    private val customDateTimeFormatter = CustomDateTimeFormatter()
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -29,16 +30,16 @@ class ReportListAdapter: RecyclerView.Adapter<ReportListAdapter.ReportViewHolder
 
     override fun onBindViewHolder(holder: ReportViewHolder, position: Int) {
         val report = listReport[position]
-        holder.bind(report, position)
+        holder.bind(report)
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listReport[holder.adapterPosition]) }
     }
 
     override fun getItemCount(): Int = listReport.size
 
     inner class ReportViewHolder(private val binding: ItemRowReportBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind(report: ReportResponseItem, position: Int) {
+        fun bind(report: ReportResponseItem) {
             with(binding) {
-                tvReportDate.text = report.reportDate
+                tvReportDate.text = report.reportDate?.time?.let {customDateTimeFormatter.fullDate(it)}
                 tvReportTitle.text = report.reportTitle
                 tvReportDetail.text = report.reportDetail
             }
@@ -48,4 +49,6 @@ class ReportListAdapter: RecyclerView.Adapter<ReportListAdapter.ReportViewHolder
     interface OnItemClickCallback {
         fun onItemClicked(data: ReportResponseItem)
     }
+
+
 }

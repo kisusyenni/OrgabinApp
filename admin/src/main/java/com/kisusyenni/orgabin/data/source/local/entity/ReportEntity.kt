@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class ReportEntity (
     val id: String,
-    val reportDate: String?,
+    val reportDate: Long?,
     val reportTitle: String?,
     val reportDetail: String?,
     val senderName: String?,

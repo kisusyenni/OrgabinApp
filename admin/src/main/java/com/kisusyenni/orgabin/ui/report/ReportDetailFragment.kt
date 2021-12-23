@@ -8,6 +8,7 @@ import android.widget.TextView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kisusyenni.orgabin.data.source.local.entity.ReportEntity
 import com.kisusyenni.orgabin.databinding.FragmentReportDetailBinding
+import com.kisusyenni.orgabin.utils.CustomDateTimeFormatter
 
 class ReportDetailFragment : BottomSheetDialogFragment() {
 
@@ -18,16 +19,14 @@ class ReportDetailFragment : BottomSheetDialogFragment() {
     private lateinit var tvReportSender: TextView
     private lateinit var tvReportAddress: TextView
     private lateinit var tvReportContact: TextView
+    private val customDateTimeFormatter = CustomDateTimeFormatter()
 
-    companion object {
-        var EXTRA_REPORT_DETAIL = "extra_report_detail"
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         fragmentReportDetailBinding= FragmentReportDetailBinding.inflate(layoutInflater, container, false)
         return fragmentReportDetailBinding.root
@@ -47,11 +46,18 @@ class ReportDetailFragment : BottomSheetDialogFragment() {
             val reportDetail = arguments?.getParcelable<ReportEntity>(EXTRA_REPORT_DETAIL)
             tvReportContentTitle.text = reportDetail?.reportTitle
             tvReportContentDetail.text = reportDetail?.reportDetail
-            tvReportContentDate.text = reportDetail?.reportDate
+            tvReportContentDate.text = reportDetail?.reportDate?.let {
+                customDateTimeFormatter.fullDate(it)
+            }
             tvReportSender.text = reportDetail?.senderName
             tvReportAddress.text = reportDetail?.senderAddress
             tvReportContact.text = reportDetail?.senderContact
         }
 
     }
+
+    companion object {
+        var EXTRA_REPORT_DETAIL = "extra_report_detail"
+    }
+
 }

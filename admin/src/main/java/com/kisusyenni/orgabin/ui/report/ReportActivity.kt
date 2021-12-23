@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kisusyenni.orgabin.data.source.local.entity.ReportEntity
+import com.kisusyenni.orgabin.data.source.remote.response.ReportDate
 import com.kisusyenni.orgabin.data.source.remote.response.ReportResponseItem
 import com.kisusyenni.orgabin.databinding.ActivityReportBinding
 
@@ -37,10 +38,11 @@ class ReportActivity : AppCompatActivity() {
 
         reportListAdapter.setOnItemClickCallback(object : ReportListAdapter.OnItemClickCallback {
             override fun onItemClicked(data: ReportResponseItem) {
+
                 val report = data.id?.let {
                     ReportEntity(
                         it,
-                        data.reportDate,
+                        data.reportDate?.time,
                         data.reportTitle,
                         data.reportDetail,
                         data.senderName,
