@@ -13,18 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orgabin">
         <activity
-            android:name=".ui.notification.NotificationActivity"
-            android:exported="true" />
-        <activity
             android:name=".ui.main.UserActivity"
             android:exported="true" />
         <activity
             android:name=".ui.report.SendReportActivity"
             android:exported="true"
             android:parentActivityName=".ui.main.UserActivity"/>
-        <activity
-            android:name=".ui.schedule.UserScheduleActivity"
-            android:exported="true" />
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
             android:exported="true"
