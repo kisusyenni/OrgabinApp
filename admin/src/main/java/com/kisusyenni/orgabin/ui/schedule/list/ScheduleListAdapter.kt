@@ -40,8 +40,6 @@ class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClick
                 tvScheduleLocation.text = schedule.location
                 tvScheduleTime.text = "${customizeTime(schedule.startTime)} - ${customizeTime(schedule.endTime)}"
 
-
-
                 ibMoreRowSch.setOnClickListener {
                     if (schedule.id !== null && schedule.date !== null && schedule.location !== null && schedule.startTime !== null && schedule.endTime !== null) {
 

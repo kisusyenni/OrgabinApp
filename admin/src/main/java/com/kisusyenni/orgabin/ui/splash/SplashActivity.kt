@@ -1,11 +1,12 @@
-package com.kisusyenni.orgabin
+package com.kisusyenni.orgabin.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.kisusyenni.orgabin.auth.AuthActivity
+import com.kisusyenni.orgabin.R
+import com.kisusyenni.orgabin.ui.auth.AuthActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

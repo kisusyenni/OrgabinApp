@@ -17,12 +17,10 @@
             android:exported="true" />
         <activity
             android:name=".ui.main.UserActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Orgabin" />
+            android:exported="true" />
         <activity
             android:name=".ui.report.SendReportActivity"
             android:exported="true"/>
-
         <activity
             android:name=".ui.schedule.UserScheduleActivity"
             android:exported="true" />
