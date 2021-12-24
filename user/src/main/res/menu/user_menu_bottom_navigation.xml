@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
-        android:id="@+id/navigation_schedule"
+        android:id="@+id/navigation_user_schedule"
         android:title="@string/nav_home_title"
         android:icon="@drawable/ic_home_24"/>
+
     <item
-        android:id="@+id/navigation_report"
+        android:id="@+id/navigation_user_send_report"
         android:title="@string/nav_report_title"
         android:icon="@drawable/ic_article_24"/>
+
 </menu>

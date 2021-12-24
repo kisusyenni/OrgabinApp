@@ -59,6 +59,7 @@ class DescriptionFragment : Fragment() {
                         dao.sendReport(report).addOnSuccessListener {
                             Toast.makeText(requireActivity(), "New Schedule is Successfully Added", Toast.LENGTH_LONG).show()
 
+                            activity?.onBackPressed()
                             // if successfully added return to first fragment
                             activity?.supportFragmentManager?.popBackStackImmediate()
                         }. addOnCanceledListener {
