@@ -10,4 +10,11 @@
         android:name="com.kisusyenni.orgabin.ui.schedule.list.ScheduleFragment"
         android:label="@string/nav_home_title"
         tools:layout="@layout/fragment_schedule" />
+
+    <fragment
+        android:id="@+id/navigation_report"
+        android:name="com.kisusyenni.orgabin.ui.report.ReportFragment"
+        android:label="@string/nav_report_title"
+        tools:layout="@layout/fragment_report" />
+
 </navigation>

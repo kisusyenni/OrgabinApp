@@ -18,20 +18,11 @@ class AdminActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
 
         val appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.navigation_schedule
+            R.id.navigation_schedule, R.id.navigation_report
         ).build()
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-//        val mFragmentManager = supportFragmentManager
-//        val mScheduleFragment = ScheduleFragment()
-//        val fragment = mFragmentManager.findFragmentByTag(ScheduleFragment::class.java.simpleName)
-//        if (fragment !is ScheduleFragment) {
-//            mFragmentManager
-//                .beginTransaction()
-//                .add(activityAdminBinding.adminContainer, mScheduleFragment, ScheduleFragment::class.java.simpleName)
-//                .commit()
-//        }
 
     }
 }

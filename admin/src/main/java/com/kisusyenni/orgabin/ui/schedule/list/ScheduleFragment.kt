@@ -17,7 +17,6 @@ import com.kisusyenni.orgabin.data.source.local.room.ScheduleDao
 import com.kisusyenni.orgabin.databinding.FragmentScheduleBinding
 import com.kisusyenni.orgabin.ui.schedule.form.ScheduleFormActivity
 
-
 class ScheduleFragment : Fragment() {
     private lateinit var scheduleFragmentBinding: FragmentScheduleBinding
     private val dao = ScheduleDao()

@@ -51,12 +51,12 @@ class ReportActivity : AppCompatActivity() {
                     )
                 }
 
-                val mReportDetailFragment = ReportDetailFragment()
-                val mBundle = Bundle()
-                mBundle.putParcelable(ReportDetailFragment.EXTRA_REPORT_DETAIL, report)
-                mReportDetailFragment.arguments = mBundle
-
-                mReportDetailFragment.show(supportFragmentManager, TAG)
+//                val mReportDetailFragment = ReportDetailFragment()
+//                val mBundle = Bundle()
+//                mBundle.putParcelable(ReportDetailFragment.EXTRA_REPORT_DETAIL, report)
+//                mReportDetailFragment.arguments = mBundle
+//
+//                mReportDetailFragment.show(supportFragmentManager, TAG)
             }
         })
 
