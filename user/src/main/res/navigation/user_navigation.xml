@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation.xml"
+    app:startDestination="@id/navigation_user_schedule">
+
+    <fragment
+        android:id="@+id/navigation_user_schedule"
+        android:name="com.kisusyenni.user.ui.schedule.UserScheduleFragment"
+        android:label="@string/nav_home_title"
+        tools:layout="@layout/fragment_user_schedule" />
+
+    <fragment
+        android:id="@+id/navigation_user_send_report"
+        android:name="com.kisusyenni.user.ui.report.SendReportFragment"
+        android:label="@string/nav_report_title"
+        tools:layout="@layout/fragment_send_report" />
+
+
+</navigation>

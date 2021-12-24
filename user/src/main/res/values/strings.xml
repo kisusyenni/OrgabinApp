@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">User</string>
+
+    <string name="app_name">Orgabin</string>
+    <string name="input_report_name_hint">Nama</string>
+    <string name="input_report_adress_hint">Alamat</string>
+    <string name="input_report_telp_hint">Nomor Telepon</string>
+    <string name="btn_report_send_text">Kirim Laporan</string>
+    <string name="input_report_title_hint">Judul Laporan</string>
+    <string name="input_report_description_hint">Isi Laporan</string>
+    <string name="send_report_title">Buat Laporan</string>
+    <string name="empty_value">data tidak boleh kosong</string>
+    <string name="next_text">Selanjutnya</string>
+    <string name="title_activity_schedule_list">ScheduleListActivity</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="input_location_hint">Masukkan TPA</string>
+    <string name="input_date_hint">Tanggal Pengangkutan</string>
+    <string name="input_start_time_hint">Waktu Mulai</string>
+    <string name="input_end_time_hint">Waktu Selesai</string>
+    <string name="input_report_name">Masukkan Nama</string>
+    <string name="input_location">Alamat</string>
+    <string name="input_phone_number">Nomor Telepon</string>
+    <string name="input_report_title">Judul Laporan</string>
+    <string name="input_description">Deskripsi</string>
+    <string name="btn_form_submit_text">Masukkan</string>
+    <string name="add_schedule_title">Tambah Jadwal</string>
+    <string name="edit_text">Edit</string>
+    <string name="delete_text">Delete</string>
+    <string name="nav_home_title">Beranda</string>
+    <string name="nav_report_title">Laporan</string>
+    <string name="nav_request_title">PKK</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
