@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.kisusyenni.user.R
-import com.kisusyenni.user.ui.schedule.UserScheduleActivity
+import com.kisusyenni.user.ui.main.UserActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +14,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@SplashScreenActivity, UserScheduleActivity::class.java))
+            startActivity(Intent(this@SplashScreenActivity, UserActivity::class.java))
             finish()
         }, 2000)
     }

@@ -13,13 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orgabin">
         <activity
-            android:name=".AdminActivity"
+            android:name=".ui.main.AdminActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.report.ReportActivity"
-            android:exported="true"/>
-        <activity
-            android:name=".SplashActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -29,15 +26,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".auth.AuthActivity"
+            android:name="com.kisusyenni.orgabin.ui.auth.AuthActivity"
             android:exported="true"/>
         <activity
             android:name=".ui.schedule.form.ScheduleFormActivity"
             android:exported="true"
-            android:parentActivityName=".ui.schedule.list.ScheduleActivity"/>
-        <activity
-            android:name=".ui.schedule.list.ScheduleActivity"
-            android:exported="true" />
+            android:parentActivityName=".ui.main.AdminActivity"
+            />
     </application>
 
 </manifest>

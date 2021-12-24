@@ -30,10 +30,6 @@ class UserScheduleActivity : AppCompatActivity() {
             }
         })
 
-        // observe loading
-//        viewModel.isLoading.observe(this, {
-//
-//        })
 
     }
 

@@ -1,4 +1,4 @@
-package com.kisusyenni.user.ui.main
+package com.kisusyenni.orgabin.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,19 +7,18 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.kisusyenni.user.R
+import com.kisusyenni.orgabin.R
 
-class UserActivity : AppCompatActivity() {
+class AdminActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user)
-
+        setContentView(R.layout.activity_admin)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        val navController = findNavController(R.id.user_nav_host_fragment)
+        val navController = findNavController(R.id.nav_host_fragment)
 
         val appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.navigation_user_schedule, R.id.navigation_user_send_report
+            R.id.navigation_schedule, R.id.navigation_report
         ).build()
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
