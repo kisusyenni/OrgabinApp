@@ -1,6 +1,8 @@
 # OrgabinApp
 Project Capstone - SIB Kampus Merdeka X Dicoding
 
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/Icon_User_1.png" width="200"/> <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/Icon_User_2.png" width="200"/> <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/Icon_Admin_1.png" width="200"/> <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/Icon_Admin_2.png" width="200"/>
+
 ## Our Team
 Android Path
 1. Kisusyenni Venessa (A213V4170)
@@ -38,7 +40,11 @@ Aplikasi yang dibangun terdiri dari dua aplikasi yaitu untuk pengguna (user) dan
 Aplikasi dikembangkan menggunakan tools *Android Studio* dan keluaran aplikasi dapat digunakan pada platform Android. Bahasa pemrograman yang digunakan yaitu *Bahasa Kotlin*. Backend dalam aplikasi menggunakan *Firebase* dan *Room*.
 
 ### Screenshots
-![Example screenshot](./img/screenshot.png)
+#### Admin
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/Admin_Splash_Screen.png" width="200"/>
+
+#### User
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/User_Splash_Screen.png" width="200"/>
 
 ### APK Here!
 APK : https://bit.ly/OrgabinApk
