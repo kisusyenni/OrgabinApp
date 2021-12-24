@@ -39,7 +39,7 @@ Aplikasi yang dibangun terdiri dari dua aplikasi yaitu untuk pengguna (user) dan
 ### Tools
 Aplikasi dikembangkan menggunakan tools *Android Studio* dan keluaran aplikasi dapat digunakan pada platform Android. Bahasa pemrograman yang digunakan yaitu *Bahasa Kotlin*. Backend dalam aplikasi menggunakan *Firebase* dan *Room*.
 
-### Screenshots
+### Documentation
 #### Admin
 <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/Admin_Splash_Screen.png" width="200"/>
 
