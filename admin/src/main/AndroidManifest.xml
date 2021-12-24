@@ -16,9 +16,6 @@
             android:name=".ui.main.AdminActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.report.ReportActivity"
-            android:exported="true"/>
-        <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
