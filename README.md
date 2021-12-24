@@ -42,9 +42,19 @@ Aplikasi dikembangkan menggunakan tools *Android Studio* dan keluaran aplikasi d
 ### Documentation
 #### Admin
 <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/Admin_Splash_Screen.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-sign-in.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-schedule.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-schedule-form.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-report.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-detail-report.png" width="200"/>
 
 #### User
 <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/User_Splash_Screen.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/user-schedule.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/user-send-report.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/user-input-bio.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/user-input-title.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/user-input-desc.png" width="200"/>
 
 ### APK Here!
 APK : https://bit.ly/OrgabinApk
