@@ -59,12 +59,12 @@ class ReportFragment : Fragment() {
                         )
                     }
 
-//                    val mReportDetailFragment = ReportDetailFragment()
-//                    val mBundle = Bundle()
-//                    mBundle.putParcelable(ReportDetailFragment.EXTRA_REPORT_DETAIL, report)
-//                    mReportDetailFragment.arguments = mBundle
-//
-//                    mReportDetailFragment.show(parentFragmentManager, TAG)
+                    val mReportDetailFragment = ReportDetailFragment()
+                    val mBundle = Bundle()
+                    mBundle.putParcelable(ReportDetailFragment.EXTRA_REPORT_DETAIL, report)
+                    mReportDetailFragment.arguments = mBundle
+
+                    mReportDetailFragment.show(parentFragmentManager, TAG)
                 }
             })
 
