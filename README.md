@@ -42,8 +42,8 @@ Aplikasi dikembangkan menggunakan tools *Android Studio* dan keluaran aplikasi d
 ### Documentation
 #### Admin
 <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/Admin_Splash_Screen.png" width="200"/>
-<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-sign-in.png" width="200"/>
-<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-schedule.png" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-sign-in.PNG" width="200"/>
+<img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-schedule.PNG" width="200"/>
 <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-schedule-form.png" width="200"/>
 <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-report.png" width="200"/>
 <img src="https://github.com/kisusyenni/OrgabinApp/blob/master/assets/admin-detail-report.png" width="200"/>
