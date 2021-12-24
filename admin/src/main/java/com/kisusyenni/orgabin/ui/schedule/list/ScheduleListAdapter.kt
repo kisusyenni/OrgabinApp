@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kisusyenni.orgabin.data.source.local.entity.ScheduleEntity
 import com.kisusyenni.orgabin.data.source.remote.response.ScheduleResponseItem
 import com.kisusyenni.orgabin.databinding.ItemRowScheduleBinding
+import com.kisusyenni.orgabin.utils.CustomDateTimeFormatter
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -13,6 +14,7 @@ import kotlin.collections.ArrayList
 class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClickListener): RecyclerView.Adapter<ScheduleListAdapter.ScheduleViewHolder>() {
 
     private var listSchedule = ArrayList<ScheduleResponseItem>()
+    private val customDateTimeFormatter = CustomDateTimeFormatter()
 
     fun setSchedule(schedule: List<ScheduleResponseItem>?) {
         if (schedule == null) return
@@ -35,10 +37,14 @@ class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClick
     inner class ScheduleViewHolder(private val binding: ItemRowScheduleBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(schedule: ScheduleResponseItem, position: Int) {
             with(binding) {
-                tvScheduleDay.text = customizeDate("EEE", schedule.date)
-                tvScheduleDate.text = customizeDate("d", schedule.date)
+                tvScheduleDay.text = schedule.date?.let { customDateTimeFormatter.getDay(it) }
+                tvScheduleDate.text = schedule.date?.let { customDateTimeFormatter.getNumberDay(it) }
                 tvScheduleLocation.text = schedule.location
-                tvScheduleTime.text = "${customizeTime(schedule.startTime)} - ${customizeTime(schedule.endTime)}"
+
+                val start = schedule.startTime?.let { customDateTimeFormatter.getTime(it) }
+                val end = schedule.endTime?.let { customDateTimeFormatter.getTime(it) }
+
+                tvScheduleTime.text = "$start - $end"
 
                 ibMoreRowSch.setOnClickListener {
                     if (schedule.id !== null && schedule.date !== null && schedule.location !== null && schedule.startTime !== null && schedule.endTime !== null) {
@@ -49,17 +55,7 @@ class ScheduleListAdapter(private var optionsMenuClickListener: OptionsMenuClick
                 }
             }
         }
-        private fun customizeDate(format: String, date:Long?): String {
-            val sdf = SimpleDateFormat(format, Locale.US)
-            sdf.timeZone = TimeZone.getTimeZone("Asia/Jakarta")
-            return sdf.format(date).toString()
-        }
 
-        private fun customizeTime(date:Long?): String {
-            val sdf = SimpleDateFormat("HH:mm", Locale.US)
-            sdf.timeZone = TimeZone.getTimeZone("Asia/Jakarta")
-            return sdf.format(date).toString()
-        }
 
     }
 

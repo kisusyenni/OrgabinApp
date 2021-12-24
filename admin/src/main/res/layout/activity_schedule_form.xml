@@ -36,50 +36,75 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_form_title" />
 
-        <EditText
+        <LinearLayout
             android:id="@+id/et_form_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_date_hint"
-            android:inputType="date"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:paddingStart="8dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_form_location"/>
+            app:layout_constraintTop_toBottomOf="@+id/et_form_location">
+            <ImageButton
+                android:id="@+id/btn_date"
+                style="@style/Base.Widget.AppCompat.ImageButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_date_range_24" />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_date_hint" />
+        </LinearLayout>
 
-        <EditText
+        <LinearLayout
             android:id="@+id/et_form_start_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_start_time_hint"
-            android:inputType="time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:paddingStart="8dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_form_date" />
+            app:layout_constraintTop_toBottomOf="@+id/et_form_date">
+            <ImageButton
+                android:id="@+id/btn_start_time"
+                style="@style/Base.Widget.AppCompat.ImageButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_time_24" />
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_start_time_hint" />
+        </LinearLayout>
 
-        <EditText
+
+        <LinearLayout
             android:id="@+id/et_form_end_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_end_time_hint"
-            android:inputType="time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:paddingStart="8dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_form_start_time" />
+            app:layout_constraintTop_toBottomOf="@+id/et_form_start_time">
+            <ImageButton
+                android:id="@+id/btn_end_time"
+                style="@style/Base.Widget.AppCompat.ImageButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_time_24" />
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_end_time_hint" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_form_submit"

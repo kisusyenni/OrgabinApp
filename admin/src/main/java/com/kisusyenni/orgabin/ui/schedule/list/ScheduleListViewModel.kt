@@ -10,9 +10,6 @@ class ScheduleListViewModel : ViewModel() {
 
     private val repository = ScheduleRepository()
 
-//    private val _scheduleList = MutableLiveData<List<ScheduleResponseItem>>()
-//    val scheduleList: LiveData<List<ScheduleResponseItem>> = _scheduleList
-
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 

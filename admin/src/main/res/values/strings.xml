@@ -21,5 +21,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="log_out_title">Log Out</string>
+    <string name="empty_error">Data tidak boleh kosong</string>
 
 </resources>
