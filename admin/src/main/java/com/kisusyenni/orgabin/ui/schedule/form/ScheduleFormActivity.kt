@@ -67,6 +67,7 @@ class ScheduleFormActivity : AppCompatActivity(), DatePickerFragment.DialogDateL
         }
 
         if (action == "edit") {
+            activityScheduleFormBinding.tvFormTitle.text = resources.getString(R.string.edit_schedule_title)
             schedule = intent.getParcelableExtra<ScheduleEntity>(EXTRA_SCHEDULE) as ScheduleEntity
             setFormData(schedule)
         }
